@@ -1,4 +1,3 @@
-
 def debug_print(debug_msg=None, **kwargs):
 
     if debug_msg:
@@ -9,6 +8,7 @@ def debug_print(debug_msg=None, **kwargs):
 
 
 def mergesort(array):
+    debug_print(array=array)
     if len(array) <= 1:
         return array
 
@@ -22,8 +22,8 @@ def mergesort(array):
 
 
 def merge(left, right):
-
     debug_print(debug_msg="Merging...", left=left, right=right)
+
     merged = []
 
     while len(left) > 0 and len(right) > 0:
@@ -43,7 +43,10 @@ def merge(left, right):
 
 if __name__ == "__main__":
     input_str = input("Enter numbers, separated by ',': ")
+
     input_list = input_str.split(",")
+    debug_print(input_list=input_list)
+
     value_list = []
     for x in input_list:
         try:
